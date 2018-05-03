@@ -33,7 +33,7 @@ public class Order {
 	private LocalDate shippingDate;
 	@Column(name = "delivery_Date")
 	private LocalDate deliveryDate;
-	@OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "order")
 	private List<Product> ProductDetails;
 	@ManyToOne
 	@JoinColumn(name = "customer")
